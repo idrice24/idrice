@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,14 @@ export class AppComponent implements OnInit {
   title = 'idrice-blog';
   loading: boolean;
 
+  constructor(
+    private router: Router
+    ){
+    this.loading = true;
+  }
+
   ngOnInit(){
+    timer(2000).subscribe(x => this.loading = false);
 
   }
 
