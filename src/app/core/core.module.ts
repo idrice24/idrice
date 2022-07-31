@@ -4,13 +4,21 @@ import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms'
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component'
+import { ContactModule } from '../contact/contact.module';
+import { BlogModule } from '../blog/blog.module';
+import { ProductsModule } from '../products/products.module';
+import { MediaModule } from '../media/media.module';
+import { AboutUsModule } from '../about-us/about-us.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
@@ -18,6 +26,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+
+    ContactModule,
+    BlogModule,
+    ContactModule,
+    ProductsModule,
+    MediaModule,
+    AboutUsModule
   ],
   exports: [
     HomeComponent,

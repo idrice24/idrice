@@ -11,6 +11,26 @@ const routes: Routes = [
 {
   path: 'home',
   component: HomeComponent, data: { animation: 'HomePage'}
+},
+/*{
+  path: 'admin',
+  loadChildren: ()=> import('./admin/admin.module').then(m => m.AdminModule),
+  canLoad: [AuthGuard]
+},*/
+{
+  path: 'contact',
+  loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+},
+{
+  path: 'products',
+  loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
+},
+{ path: 'media',
+  loadChildren: () => import('./media/media.module').then(m => m.MediaModule)
+},
+
+{
+  path: '**', component: PageNotFoundComponent
 }
 
   ];

@@ -29,6 +29,7 @@ import { CoreModule } from './core/core.module';
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 // Diagnostic only: inspect riuter configuration
 constructor(
