@@ -13,7 +13,7 @@ const routes: Routes = [
   component: HomeComponent, data: { animation: 'HomePage'}
 },
 /*{
-  path: 'admin',
+  path: 'about',
   loadChildren: ()=> import('./admin/admin.module').then(m => m.AdminModule),
   canLoad: [AuthGuard]
 },*/
