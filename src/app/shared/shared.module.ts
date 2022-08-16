@@ -4,7 +4,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { GallerySharedComponent } from './components/gallery-shared/gallery-shared.component';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { GallerySharedComponent } from './components/gallery-shared/gallery-shar
     GallerySharedComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
