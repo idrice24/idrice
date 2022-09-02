@@ -1,26 +1,61 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
-version: 2.1
-
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+name: Build
+on:
+  push:
+  pull_request:
 jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
+    steps:
+      # Checkout the repository
+      - name: Checkout the Repository
+        uses: actions/checkout@v1
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # Set up NodeJs Version to use in our project
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # No 'uses' keyword because we want to run script from package.json file
+      - name: Update dist directory
+        run: |
+          npm i
+          npm run deploy
+
+
+      - name: ===>NOT WORK<=== Update Bundles (/docs directory)
+        if: ${{ github.ref == 'refs/heads/main' }} # Only main branch
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: docs/
+          commit-msg: =====>  ${{ github.event.head_commit.message }} <====
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+
+      - name: Deploy static files (Github page - into docs folder)
+        uses: peaceiris/actions-gh-pages@v3.7.0-8
+        #  if: ${{ github.ref == 'refs/heads/main' }} # Only main branch
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}} # set automatically
+          keep_files: false # Keeping existing files
+          # destination_dir: ./docs # The Folder(from publish_dir ) Where gh-page point his html files
+          publish_dir: ./docs # Sources folder to get all html files
+          commit_message: ----> ${{github.event.head_commit.message}} <---- # Set custom commit message
+          force_orphan: true # allows you to make your publish branch with only the latest commit
+          publish_branch: gh-pages # Default=gh-pages. Set Another GitHub Pages Branch, but we want under foder docs!!
