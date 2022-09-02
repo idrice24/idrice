@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "deploy": "ng build --verbose",
     "deploy2": "ng build --output-path docs --base-href /idrice/",
     "update-dev": "npm i -g npm-check-updates && ncu -u && npm install",
     "outdated": "npm outdated",
