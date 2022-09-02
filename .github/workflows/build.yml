@@ -33,16 +33,7 @@ jobs:
         run: |
           npm i
           npm run deploy
-
-
-      - name: ===>NOT WORK<=== Update Bundles (/docs directory)
-        if: ${{ github.ref == 'refs/heads/main' }} # Only main branch
-        uses: test-room-7/action-update-file@v1
-        with:
-          file-path: docs/
-          commit-msg: =====>  ${{ github.event.head_commit.message }} <====
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
+          
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
