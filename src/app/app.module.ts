@@ -38,5 +38,6 @@ constructor(
     console.log(key);
     return (typeof value == 'function') ? value.name : value;
   }
+  console.log('Routes: ', JSON.stringify(this.router.config, replace, 2));
    }
   }
