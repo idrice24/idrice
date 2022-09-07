@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './core/components/home/home.component';
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
+import { AboutUsComponent } from './about-us/components/about-us/about-us.component';
 
 const routes: Routes = [
 {
@@ -12,11 +13,10 @@ const routes: Routes = [
   path: 'home',
   component: HomeComponent, data: { animation: 'HomePage'}
 },
-/*{
-  path: 'about',
-  loadChildren: ()=> import('./admin/admin.module').then(m => m.AdminModule),
-  canLoad: [AuthGuard]
-},*/
+{
+  path: 'about-us',
+  loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule)
+},
 {
   path: 'contact',
   loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
@@ -28,6 +28,10 @@ const routes: Routes = [
 { path: 'media',
   loadChildren: () => import('./media/media.module').then(m => m.MediaModule)
 },
+{
+  path:'blog',
+  loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
+},
 
 {
   path: '**', component: PageNotFoundComponent
@@ -37,7 +41,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled',
+  imports: [RouterModule.forRoot(routes, { enableTracing: true, anchorScrolling: 'enabled',
     relativeLinkResolution: 'legacy'})],
   exports:[RouterModule]
 })

@@ -27,7 +27,6 @@ import { AboutUsModule } from '../about-us/about-us.module';
     FormsModule,
     ReactiveFormsModule,
 
-    ContactModule,
     BlogModule,
     ContactModule,
     ProductsModule,
@@ -36,7 +35,8 @@ import { AboutUsModule } from '../about-us/about-us.module';
   ],
   exports: [
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RouterModule
   ]
 })
 export class CoreModule { }

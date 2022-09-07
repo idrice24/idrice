@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
 {
-  path: 'products', component: ProductItemsComponent
+  path: 'products', component: ProductsComponent, data: { animation: 'ProductsPage'}
 }];
 
 @NgModule({
@@ -22,6 +22,6 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  exports: [ProductItemsComponent]
+  exports: [ProductItemsComponent,RouterModule, ProductsComponent]
 })
 export class ProductsModule { }
