@@ -20,6 +20,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     SharedModule,
+    RouterModule,
     RouterModule.forChild(routes)
   ],
   exports: [ProductItemsComponent,RouterModule, ProductsComponent]

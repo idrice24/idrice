@@ -6,7 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
 {
-  path: 'about-us', component:AboutUsComponent, data: { animation: 'AboutUsPage'}
+  path: 'aboutus', component:AboutUsComponent, data: { animation: 'AboutUsPage'}
 }];
 
 
@@ -18,7 +18,7 @@ const routes: Routes = [
     CommonModule,
     SharedModule,
     RouterModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forChild(routes)
   ],
   exports: [
     AboutUsComponent, 

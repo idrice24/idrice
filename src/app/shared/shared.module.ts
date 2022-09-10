@@ -6,7 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { GallerySharedComponent } from './components/gallery-shared/gallery-shared.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,13 +18,16 @@ import { GallerySharedComponent } from './components/gallery-shared/gallery-shar
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     GallerySharedComponent,
-    RouterModule
+    RouterModule,
+    HttpClientModule
 
 
   ],

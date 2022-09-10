@@ -10,13 +10,14 @@ import { timer } from 'rxjs';
 
 
 export class AppComponent implements OnInit {
-  title = 'idrice-blog';
+  title = 'idrice';
   loading: boolean;
 
   constructor(
     private router: Router
     ){
     this.loading = true;
+    console.log('##########> configured routes: ', this.router)
   }
 
   ngOnInit(){
