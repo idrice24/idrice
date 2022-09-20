@@ -1,11 +1,16 @@
 <div class="container-fluid">
   <div *ngIf="!loading">
-    <app-header></app-header>
-    <div>
+    <div class="header">
+      <app-header></app-header>
+    </div>
+
+    <div class="container-fluid" [@routeAnimations]="prepareRoute(outlet)">
       <router-outlet #outlet="outlet">
       </router-outlet>
     </div>
+    <div class="footer">
     <app-footer></app-footer>
+    </div>
   </div>
   
 </div>
