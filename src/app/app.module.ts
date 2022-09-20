@@ -10,6 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from './auth/auth.module';
+
 
 
 @NgModule({
@@ -24,14 +27,16 @@ import { CoreModule } from './core/core.module';
     CoreModule,
     FormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AuthModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 
 export class AppModule {
-// Diagnostic only: inspect riuter configuration
+// Diagnostic only: inspect router configuration
 constructor(
   private router: Router){
    const replace = (key: any, value: any)=>{
