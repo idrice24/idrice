@@ -5,26 +5,27 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
-import { GallerySharedComponent } from './components/gallery-shared/gallery-shared.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
-    SideBarComponent,
-    GallerySharedComponent
+    SideBarComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    GallerySharedComponent,
-    RouterModule
+    RouterModule,
+    HttpClientModule
+
 
 
   ],

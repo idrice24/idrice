@@ -5,8 +5,6 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component'
 import { ContactModule } from '../contact/contact.module';
 import { BlogModule } from '../blog/blog.module';
 import { ProductsModule } from '../products/products.module';
@@ -16,9 +14,7 @@ import { AboutUsModule } from '../about-us/about-us.module';
 @NgModule({
   declarations: [
     HomeComponent,
-    PageNotFoundComponent,
-    LoginComponent,
-    RegisterComponent
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -35,8 +31,7 @@ import { AboutUsModule } from '../about-us/about-us.module';
   ],
   exports: [
     HomeComponent,
-    PageNotFoundComponent,
-    RouterModule
+    PageNotFoundComponent
   ]
 })
 export class CoreModule { }

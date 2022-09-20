@@ -1,0 +1,12 @@
+.footer{
+    position: relative;
+    clear: both;
+    height: 200px;
+    margin-top: 200px;
+}
+
+.header{
+    position: relative;
+    clear:both;
+    margin-bottom: 80px;
+}
