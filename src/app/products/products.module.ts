@@ -20,9 +20,12 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     SharedModule,
-    RouterModule,
     RouterModule.forChild(routes)
   ],
-  exports: [ProductItemsComponent,RouterModule, ProductsComponent]
+  exports: [
+    ProductItemsComponent,
+    RouterModule,
+    ProductsComponent
+  ]
 })
 export class ProductsModule { }

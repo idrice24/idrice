@@ -107,3 +107,8 @@
     margin:  20px 10px  80px 10px;
   }
 }
+
+.start-bg{
+  height: 400px;
+  background-image: url("/assets/img/lgbg.webp");
+}

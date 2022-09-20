@@ -18,6 +18,7 @@ ul{
 }
 .footer{
 	background-color: #24262b;
+	position: relative;
 }
 .footer-col{
 	width: 25%;
