@@ -1,0 +1,24 @@
+.body {
+    background-image: url("/assets/img/lgbg.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+
+}
+.card{
+    opacity: 0.8;
+}
+.lgform{
+    text-align: center;
+}
+
+img{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.card-body{
+    margin-bottom: auto;
+}
