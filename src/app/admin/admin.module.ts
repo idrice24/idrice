@@ -9,6 +9,7 @@ import { ManageProductComponent } from './components/manage-product/manage-produ
 import { ManageUserComponent } from './components/manage-user/manage-user.component';
 import { ManageVideoComponent } from './components/manage-video/manage-video.component';
 import { ManageAbonnementComponent } from './components/manage-abonnement/manage-abonnement.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 
 
 
@@ -22,7 +23,8 @@ import { ManageAbonnementComponent } from './components/manage-abonnement/manage
     ManageProductComponent,
     ManageUserComponent,
     ManageVideoComponent,
-    ManageAbonnementComponent
+    ManageAbonnementComponent,
+    AdminDashboardComponent
   ],
   imports: [
     CommonModule
