@@ -11,8 +11,14 @@ import { FutureProductComponent } from './components/future-product/future-produ
 
 const routes: Routes = [
 {
-  path: 'products', component: ProductsComponent, data: { animation: 'ProductsPage'}
-}];
+  path: 'products', 
+  component: ProductsComponent, data: { animation: 'ProductsPage'}
+},
+{
+  path: 'products/product/id', 
+  component: ProductViewByIdComponent, data: { animation: 'ProductPage'}
+}
+ ];
 
 @NgModule({
   declarations: [

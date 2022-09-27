@@ -1,0 +1,13 @@
+.card{
+	display: inline-flex;
+	margin: 20px;
+	width: 300px;
+	height: auto;
+}
+
+.card-body{
+	width: 100%;
+}
+a {
+	margin: 2px;
+}
