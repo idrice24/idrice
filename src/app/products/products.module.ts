@@ -5,16 +5,28 @@ import { ProductItemsComponent } from './components/product-items/product-items.
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes} from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ProductViewByIdComponent } from './components/product-view-by-id/product-view-by-id.component';
+import { TestimoniansComponent } from './components/testimonians/testimonians.component';
+import { FutureProductComponent } from './components/future-product/future-product.component';
 
 const routes: Routes = [
 {
-  path: 'products', component: ProductsComponent, data: { animation: 'ProductsPage'}
-}];
+  path: 'products', 
+  component: ProductsComponent, data: { animation: 'ProductsPage'}
+},
+{
+  path: 'products/product/id', 
+  component: ProductViewByIdComponent, data: { animation: 'ProductPage'}
+}
+ ];
 
 @NgModule({
   declarations: [
     ProductsComponent,
-    ProductItemsComponent
+    ProductItemsComponent,
+    ProductViewByIdComponent,
+    TestimoniansComponent,
+    FutureProductComponent
   ],
   imports: [
     CommonModule,
