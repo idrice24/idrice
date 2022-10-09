@@ -5,7 +5,7 @@ import { AppUser } from './shared/models/app-user';
 @Injectable({
   providedIn: 'root'
 })
-export class InMemoryService {
+export class InMemoryService implements InMemoryDbService {
   createDb(){
     const users = [
     {id: 11, name: 'idrice', username: 'idrice24', email:'idrice@yahoo.com', password: '0000', isAdmin: true },
