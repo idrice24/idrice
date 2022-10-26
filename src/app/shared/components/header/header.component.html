@@ -1,3 +1,4 @@
+<!--
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-0">
 	<div class="container">
 		<a class="navbar-brand" href="#">Navbar</a>
@@ -43,4 +44,36 @@
 		</div>
 	</div>
 	
+</nav>
+-->
+
+<nav class="navbar">
+	<a href="" class="logo">ACTIVE</a>
+	<div class="nav-links">
+		<ul>
+			<li><a routerLinkActive="active" routerLink="/home">	HOME</a></li>
+			<li><a routerLinkActive="active" routerLink="/contact">	CONTACT</a></li>
+			<li><a routerLinkActive="active" routerLink="/blogs">	BLOG</a></li>
+			<li><a routerLinkActive="active" routerLink="/products">	PRODUCTS</a></li>
+			<li><a routerLinkActive="active" routerLink="/about-us">	ABOUT-US</a></li>
+			<li class="dropbtn">
+					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<i class="fa fa-cogs d-lg-none d-xl-none"> </i>
+						CMR
+					</a>
+					<div class="dropd-content">
+						<a routerLinkActive="active" routerLink="/login" class="dropdown-item">LOGIN</a><hr>
+						<a routerLinkActive="active" routerLink="/register" class="dropdown-item">REGISTER</a><hr>
+						<a routerLinkActive="active" routerLink="/gallery" class="dropdown-item">GALLERY</a>
+						<hr class="dropdown-divider">
+						<a routerLinkActive="active" routerLink="/videos" class="dropdown-item">VIDEOS</a>
+					</div>
+				</li>
+				
+			<form class="d-flex">
+				<input type="search" name="search" class="form-control me-2" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		</ul>
+	</div>
 </nav>
