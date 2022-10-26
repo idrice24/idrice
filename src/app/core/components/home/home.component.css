@@ -5,6 +5,8 @@
 
 .homeSet{
   padding-top: 40px;
+  background-image: url(https://source.unsplash.com/1600x900/?nature);
+  background-size: cover;
 }
 
 * {
@@ -109,20 +111,106 @@
 }
 
 .start-bg{
-  height: 400px;
-  background-image: url("/assets/img/bg5.jpg");
+  height: 600px;
+  background-image: url(https://source.unsplash.com/1600x900/?life);
+  background-size: cover;
 }
 
 .products{
   height: 400px;
-  background-image: url("/assets/img/bg7.jpg");
+  background-image: url(https://source.unsplash.com/1600x900/?forest);
+  background-size: cover;
 }
 
 .about-us {
-  background-image: url("/assets/img/bg3.jpg");
+  background-image: url(https://source.unsplash.com/1600x900/?water);
+  background-size: cover;
 }
 
 .news-bg{
-  height: 400px;
-  background-image: url("/assets/img/prod1 (9).jpg");
+  height: 600px;
+  background-image: url(https://source.unsplash.com/1600x900/?school);
+  background-size: cover;
+}
+
+.photo{
+  border-spacing: 15px;
+  border-collapse: collapse;
+}
+
+.gallery-container{
+  display: grid;
+  grid-gap: 10px; 
+  grid-columns: 3/ span 6;
+  
+}
+
+.gallery-item{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-item .image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-item .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.gallery-item .image img{
+  transform: scale(1.50);
+}
+
+.gallery-item .text{
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 25px;
+  pointer-events: none;
+  z-index: 4;
+  transition: .3s ease-in-out;
+  -webkit-backdrop-filter:  blue(5px) saturate(1.8);
+  backdrop-filter:  blue(5px) saturate(1.8);
+}
+
+.gallery-item:hover .text{
+  opacity: 1;
+  animation: move-down .3s linear;
+  padding: 1em;
+  width: 100%;
+  outline: 2px solid blue;
+
+}
+
+.w-3{
+  grid-column: span 3 ;
+}
+
+.h-2{
+  grid-row: span 3 ;
+}
+
+
+
+@keyframes move-down{
+  0%{
+    top: 10px;
+  }
+  50%{
+    top: 35px;
+  }
+  100%{
+    top: 50px;
+  }
 }
