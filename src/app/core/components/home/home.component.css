@@ -120,6 +120,7 @@
   height: 400px;
   background-image: url(https://source.unsplash.com/1600x900/?forest);
   background-size: cover;
+  width: 100%;
 }
 
 .about-us {
@@ -212,5 +213,38 @@
   }
   100%{
     top: 50px;
+  }
+}
+
+.whatsapp_frame{
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 90px;
+  height: 60px;
+  color: red;
+
+}
+
+.chat_icon{
+  position: fixed;
+  bottom: 35px;
+  left: 20px;
+}
+
+
+:host ::ng-deep .ghis-custom-scrolltop {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 4rem;
+  background-color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--primary-color);
+  }
+
+  .p-scrolltop-icon {
+    font-size: 1rem;
+    color: var(--primary-color-text);
   }
 }
