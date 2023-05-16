@@ -23,11 +23,7 @@ import { AboutUsModule } from '../about-us/about-us.module';
     FormsModule,
     ReactiveFormsModule,
 
-    BlogModule,
-    ContactModule,
     ProductsModule,
-    MediaModule,
-    AboutUsModule
   ],
   exports: [
     HomeComponent,
