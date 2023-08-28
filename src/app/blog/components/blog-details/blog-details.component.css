@@ -1,0 +1,89 @@
+*{
+	padding: 2px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+section{
+	display: inline-block;
+	padding: 2px;
+	margin-right: -100px;
+	margin-left: 100px;
+	float: center;
+	
+}
+
+h3{
+	text-decoration: inherit;
+	text-decoration-line: 2px;
+	text-shadow: 2px 2px lightskyblue;
+}
+
+.moreInfo{
+	float: right;
+	margin-right: -290px;
+}
+
+.info{
+	display: inline-flex;
+}
+
+.msg{
+	width: 100%;
+}
+
+.details{
+	float: left;
+	border: white solid 1px;
+	width: 850px;
+	height: auto;
+}
+
+.details img{
+	height: 250px;
+	width: auto;
+	z-index: -1;
+	border-radius: 10px;
+	image-resolution: inherit;
+}
+
+.listInfo{
+	text-decoration: none;
+	text-align: center;
+	border: aliceblue solid 1px;
+	padding: 4px;
+	margin: 4px;
+	font-size: 20px;
+	box-shadow: 2px 2px lightsteelblue;
+}
+
+.listInfo ul li{
+	text-decoration: initial;
+	list-style: none;
+}
+
+.newapp{
+	text-decoration: none;
+	border: aliceblue solid 1px;
+	box-shadow: 2px 2px lightsteelblue;
+	margin-top: 4px;
+	text-align: center;
+}
+.newapp img{
+	width: auto;
+	height: 150px;
+}
+
+.morelink{
+	text-decoration: initial;
+	text-align: center;
+	box-shadow: 2px 2px lightsteelblue;
+	border: aliceblue solid 1px;
+	padding: -2px;
+	margin-top: 4px;
+}
+
+.morelink ul li{
+	text-decoration: initial;
+	list-style: none;
+}

@@ -32,8 +32,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDialogModule,
     MatButtonModule
 
-
-
   ],
   providers: []
 })

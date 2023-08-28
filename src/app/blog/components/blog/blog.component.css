@@ -1,0 +1,61 @@
+*{
+	padding: 2px;
+}
+@media screen and (min-width: 480px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+section{
+	-webkit-column-count: 2;
+	column-count: 2;
+	display: block;
+	
+}
+
+.appImage img{
+	height: 250px;
+	width: 300px;
+	/*position: absolute;*/
+	z-index: -1;
+	border-radius: 10px;
+
+}
+
+.info{
+	display: inline-flex;
+}
+.msg{
+	display: inline;
+}
+
+h4{
+	background-size: 5px;
+	background-color: blue;
+	color: white;
+}
+
+.bpimages{
+	display: block;
+	-webkit-column-count: 2;
+	column-count: 2;
+	
+}
+
+.bpimage{
+	width: auto;
+	display: inline-block;
+}
+
+.btn{
+	background-color: blue;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 20px;
+	}
