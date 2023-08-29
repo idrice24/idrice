@@ -22,12 +22,12 @@ import { AboutUsModule } from '../about-us/about-us.module';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-
+    ContactModule, // this is to publish contact on home page
+    AboutUsModule,  // this is to publish about-us on home page
+    ProductsModule, // this is to publish product on home page
     BlogModule,
-    ContactModule,
-    ProductsModule,
-    MediaModule,
-    AboutUsModule
+
+
   ],
   exports: [
     HomeComponent,
