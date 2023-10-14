@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { timer } from 'rxjs';
 import { slideInAnimation } from './shared/animations/animation';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ export class AppComponent implements OnInit {
   loading: boolean;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private config: PrimeNGConfig
     ){
     this.loading = true;
     console.log('##########> configured routes: ', this.router)

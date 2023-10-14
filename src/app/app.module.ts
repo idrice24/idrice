@@ -13,6 +13,8 @@ import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './auth/auth.module';
 
+// import { InMemoryDataService } from './in-memory-data.service';
+import { MessageService } from 'primeng/api';
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import { AuthModule } from './auth/auth.module';
 export class AppModule {
 // Diagnostic only: inspect router configuration
 constructor(
-  private router: Router){
+  private router: Router,
+  private messageService: MessageService){
    const replace = (key: any, value: any)=>{
     console.log(key);
     return (typeof value == 'function') ? value.name : value;
